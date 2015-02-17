@@ -15,6 +15,10 @@
 		40BFDB671A925E1C00C21639 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB661A925E1C00C21639 /* Images.xcassets */; };
 		40BFDB6A1A925E1C00C21639 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB681A925E1C00C21639 /* LaunchScreen.xib */; };
 		40BFDB761A925E1C00C21639 /* StacktasticClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB751A925E1C00C21639 /* StacktasticClientTests.m */; };
+		40BFDB811A925FBB00C21639 /* BurgerContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB801A925FBB00C21639 /* BurgerContainerController.m */; };
+		40BFDB831A926F5F00C21639 /* burger_sandwich_PNG4135.png in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */; };
+		40BFDB891A9271E200C21639 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB881A9271E200C21639 /* MenuTableViewController.m */; };
+		40BFDB8C1A92726200C21639 /* WebOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB8B1A92726200C21639 /* WebOauthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,13 @@
 		40BFDB6F1A925E1C00C21639 /* StacktasticClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StacktasticClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BFDB741A925E1C00C21639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40BFDB751A925E1C00C21639 /* StacktasticClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StacktasticClientTests.m; sourceTree = "<group>"; };
+		40BFDB7F1A925FBB00C21639 /* BurgerContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerContainerController.h; sourceTree = "<group>"; };
+		40BFDB801A925FBB00C21639 /* BurgerContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerController.m; sourceTree = "<group>"; };
+		40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burger_sandwich_PNG4135.png; sourceTree = "<group>"; };
+		40BFDB871A9271E200C21639 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		40BFDB881A9271E200C21639 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		40BFDB8A1A92726200C21639 /* WebOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOauthViewController.h; sourceTree = "<group>"; };
+		40BFDB8B1A92726200C21639 /* WebOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebOauthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +94,7 @@
 		40BFDB551A925E1C00C21639 /* StacktasticClient */ = {
 			isa = PBXGroup;
 			children = (
+				40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */,
 				40BFDB5A1A925E1C00C21639 /* AppDelegate.h */,
 				40BFDB5B1A925E1C00C21639 /* AppDelegate.m */,
 				40BFDB601A925E1C00C21639 /* ViewController.h */,
@@ -92,6 +104,12 @@
 				40BFDB681A925E1C00C21639 /* LaunchScreen.xib */,
 				40BFDB5D1A925E1C00C21639 /* StacktasticClient.xcdatamodeld */,
 				40BFDB561A925E1C00C21639 /* Supporting Files */,
+				40BFDB7F1A925FBB00C21639 /* BurgerContainerController.h */,
+				40BFDB801A925FBB00C21639 /* BurgerContainerController.m */,
+				40BFDB871A9271E200C21639 /* MenuTableViewController.h */,
+				40BFDB881A9271E200C21639 /* MenuTableViewController.m */,
+				40BFDB8A1A92726200C21639 /* WebOauthViewController.h */,
+				40BFDB8B1A92726200C21639 /* WebOauthViewController.m */,
 			);
 			path = StacktasticClient;
 			sourceTree = "<group>";
@@ -204,6 +222,7 @@
 			files = (
 				40BFDB651A925E1C00C21639 /* Main.storyboard in Resources */,
 				40BFDB6A1A925E1C00C21639 /* LaunchScreen.xib in Resources */,
+				40BFDB831A926F5F00C21639 /* burger_sandwich_PNG4135.png in Resources */,
 				40BFDB671A925E1C00C21639 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,9 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BFDB811A925FBB00C21639 /* BurgerContainerController.m in Sources */,
 				40BFDB5C1A925E1C00C21639 /* AppDelegate.m in Sources */,
 				40BFDB591A925E1C00C21639 /* main.m in Sources */,
+				40BFDB8C1A92726200C21639 /* WebOauthViewController.m in Sources */,
 				40BFDB621A925E1C00C21639 /* ViewController.m in Sources */,
+				40BFDB891A9271E200C21639 /* MenuTableViewController.m in Sources */,
 				40BFDB5F1A925E1C00C21639 /* StacktasticClient.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
