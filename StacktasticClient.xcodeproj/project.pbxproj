@@ -10,7 +10,6 @@
 		40BFDB591A925E1C00C21639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB581A925E1C00C21639 /* main.m */; };
 		40BFDB5C1A925E1C00C21639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB5B1A925E1C00C21639 /* AppDelegate.m */; };
 		40BFDB5F1A925E1C00C21639 /* StacktasticClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB5D1A925E1C00C21639 /* StacktasticClient.xcdatamodeld */; };
-		40BFDB621A925E1C00C21639 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB611A925E1C00C21639 /* ViewController.m */; };
 		40BFDB651A925E1C00C21639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB631A925E1C00C21639 /* Main.storyboard */; };
 		40BFDB671A925E1C00C21639 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB661A925E1C00C21639 /* Images.xcassets */; };
 		40BFDB6A1A925E1C00C21639 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB681A925E1C00C21639 /* LaunchScreen.xib */; };
@@ -19,6 +18,14 @@
 		40BFDB831A926F5F00C21639 /* burger_sandwich_PNG4135.png in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */; };
 		40BFDB891A9271E200C21639 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB881A9271E200C21639 /* MenuTableViewController.m */; };
 		40BFDB8C1A92726200C21639 /* WebOauthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB8B1A92726200C21639 /* WebOauthViewController.m */; };
+		40BFDB8E1A93060B00C21639 /* to-do in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB8D1A93060B00C21639 /* to-do */; };
+		40BFDB901A93071D00C21639 /* stack-exchange-info in Resources */ = {isa = PBXBuildFile; fileRef = 40BFDB8F1A93071D00C21639 /* stack-exchange-info */; };
+		40BFDB991A94481D00C21639 /* StackOverflowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB981A94481D00C21639 /* StackOverflowService.m */; };
+		40BFDB9C1A9448AB00C21639 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB9B1A9448AB00C21639 /* Constants.m */; };
+		40BFDBA51A94519E00C21639 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDBA41A94519E00C21639 /* Question.m */; };
+		40BFDBA81A94526900C21639 /* QuestionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDBA71A94526900C21639 /* QuestionCell.m */; };
+		40BFDBAB1A9453AD00C21639 /* SearchQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDBAA1A9453AD00C21639 /* SearchQuestionsViewController.m */; };
+		40C543CD1A950699003A8206 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C543CC1A950699003A8206 /* ProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +45,6 @@
 		40BFDB5A1A925E1C00C21639 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		40BFDB5B1A925E1C00C21639 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		40BFDB5E1A925E1C00C21639 /* StacktasticClient.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StacktasticClient.xcdatamodel; sourceTree = "<group>"; };
-		40BFDB601A925E1C00C21639 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		40BFDB611A925E1C00C21639 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		40BFDB641A925E1C00C21639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		40BFDB661A925E1C00C21639 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		40BFDB691A925E1C00C21639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,6 +58,21 @@
 		40BFDB881A9271E200C21639 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		40BFDB8A1A92726200C21639 /* WebOauthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebOauthViewController.h; sourceTree = "<group>"; };
 		40BFDB8B1A92726200C21639 /* WebOauthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebOauthViewController.m; sourceTree = "<group>"; };
+		40BFDB8D1A93060B00C21639 /* to-do */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "to-do"; sourceTree = "<group>"; };
+		40BFDB8F1A93071D00C21639 /* stack-exchange-info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "stack-exchange-info"; sourceTree = "<group>"; };
+		40BFDB971A94481D00C21639 /* StackOverflowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflowService.h; sourceTree = "<group>"; };
+		40BFDB981A94481D00C21639 /* StackOverflowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflowService.m; sourceTree = "<group>"; };
+		40BFDB9A1A9448AB00C21639 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		40BFDB9B1A9448AB00C21639 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		40BFDBA31A94519E00C21639 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		40BFDBA41A94519E00C21639 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		40BFDBA61A94526900C21639 /* QuestionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCell.h; sourceTree = "<group>"; };
+		40BFDBA71A94526900C21639 /* QuestionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCell.m; sourceTree = "<group>"; };
+		40BFDBA91A9453AD00C21639 /* SearchQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchQuestionsViewController.h; sourceTree = "<group>"; };
+		40BFDBAA1A9453AD00C21639 /* SearchQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchQuestionsViewController.m; sourceTree = "<group>"; };
+		40C543CA1A950221003A8206 /* MenuPressedDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuPressedDelegate.h; sourceTree = "<group>"; };
+		40C543CB1A950699003A8206 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		40C543CC1A950699003A8206 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +93,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40A1D0281A95537800BC1123 /* Burger Container */ = {
+			isa = PBXGroup;
+			children = (
+				40BFDB7F1A925FBB00C21639 /* BurgerContainerController.h */,
+				40BFDB801A925FBB00C21639 /* BurgerContainerController.m */,
+				40BFDB871A9271E200C21639 /* MenuTableViewController.h */,
+				40BFDB881A9271E200C21639 /* MenuTableViewController.m */,
+				40C543CB1A950699003A8206 /* ProfileViewController.h */,
+				40C543CC1A950699003A8206 /* ProfileViewController.m */,
+				40A1D02A1A95544E00BC1123 /* Menu Table */,
+			);
+			name = "Burger Container";
+			sourceTree = "<group>";
+		};
+		40A1D0291A9553FA00BC1123 /* Search Questions */ = {
+			isa = PBXGroup;
+			children = (
+				40BFDBA91A9453AD00C21639 /* SearchQuestionsViewController.h */,
+				40BFDBAA1A9453AD00C21639 /* SearchQuestionsViewController.m */,
+				40BFDB971A94481D00C21639 /* StackOverflowService.h */,
+				40BFDB981A94481D00C21639 /* StackOverflowService.m */,
+			);
+			name = "Search Questions";
+			sourceTree = "<group>";
+		};
+		40A1D02A1A95544E00BC1123 /* Menu Table */ = {
+			isa = PBXGroup;
+			children = (
+				40C543CA1A950221003A8206 /* MenuPressedDelegate.h */,
+				40BFDB8A1A92726200C21639 /* WebOauthViewController.h */,
+				40BFDB8B1A92726200C21639 /* WebOauthViewController.m */,
+			);
+			name = "Menu Table";
+			sourceTree = "<group>";
+		};
 		40BFDB4A1A925E1C00C21639 = {
 			isa = PBXGroup;
 			children = (
@@ -94,22 +149,11 @@
 		40BFDB551A925E1C00C21639 /* StacktasticClient */ = {
 			isa = PBXGroup;
 			children = (
-				40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */,
-				40BFDB5A1A925E1C00C21639 /* AppDelegate.h */,
-				40BFDB5B1A925E1C00C21639 /* AppDelegate.m */,
-				40BFDB601A925E1C00C21639 /* ViewController.h */,
-				40BFDB611A925E1C00C21639 /* ViewController.m */,
-				40BFDB631A925E1C00C21639 /* Main.storyboard */,
-				40BFDB661A925E1C00C21639 /* Images.xcassets */,
-				40BFDB681A925E1C00C21639 /* LaunchScreen.xib */,
+				40BFDB931A9442F400C21639 /* Model */,
 				40BFDB5D1A925E1C00C21639 /* StacktasticClient.xcdatamodeld */,
+				40BFDB911A9442D900C21639 /* View */,
+				40BFDB921A9442E500C21639 /* Controller */,
 				40BFDB561A925E1C00C21639 /* Supporting Files */,
-				40BFDB7F1A925FBB00C21639 /* BurgerContainerController.h */,
-				40BFDB801A925FBB00C21639 /* BurgerContainerController.m */,
-				40BFDB871A9271E200C21639 /* MenuTableViewController.h */,
-				40BFDB881A9271E200C21639 /* MenuTableViewController.m */,
-				40BFDB8A1A92726200C21639 /* WebOauthViewController.h */,
-				40BFDB8B1A92726200C21639 /* WebOauthViewController.m */,
 			);
 			path = StacktasticClient;
 			sourceTree = "<group>";
@@ -136,8 +180,45 @@
 			isa = PBXGroup;
 			children = (
 				40BFDB741A925E1C00C21639 /* Info.plist */,
+				40BFDB8D1A93060B00C21639 /* to-do */,
+				40BFDB8F1A93071D00C21639 /* stack-exchange-info */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		40BFDB911A9442D900C21639 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40BFDB681A925E1C00C21639 /* LaunchScreen.xib */,
+				40BFDB631A925E1C00C21639 /* Main.storyboard */,
+				40BFDB661A925E1C00C21639 /* Images.xcassets */,
+				40BFDB821A926F5F00C21639 /* burger_sandwich_PNG4135.png */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		40BFDB921A9442E500C21639 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40A1D0291A9553FA00BC1123 /* Search Questions */,
+				40A1D0281A95537800BC1123 /* Burger Container */,
+				40BFDB5A1A925E1C00C21639 /* AppDelegate.h */,
+				40BFDB5B1A925E1C00C21639 /* AppDelegate.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		40BFDB931A9442F400C21639 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				40BFDB9A1A9448AB00C21639 /* Constants.h */,
+				40BFDB9B1A9448AB00C21639 /* Constants.m */,
+				40BFDBA31A94519E00C21639 /* Question.h */,
+				40BFDBA41A94519E00C21639 /* Question.m */,
+				40BFDBA61A94526900C21639 /* QuestionCell.h */,
+				40BFDBA71A94526900C21639 /* QuestionCell.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +312,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40BFDB901A93071D00C21639 /* stack-exchange-info in Resources */,
+				40BFDB8E1A93060B00C21639 /* to-do in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,9 +328,14 @@
 				40BFDB5C1A925E1C00C21639 /* AppDelegate.m in Sources */,
 				40BFDB591A925E1C00C21639 /* main.m in Sources */,
 				40BFDB8C1A92726200C21639 /* WebOauthViewController.m in Sources */,
-				40BFDB621A925E1C00C21639 /* ViewController.m in Sources */,
+				40BFDB991A94481D00C21639 /* StackOverflowService.m in Sources */,
+				40BFDBA81A94526900C21639 /* QuestionCell.m in Sources */,
 				40BFDB891A9271E200C21639 /* MenuTableViewController.m in Sources */,
+				40BFDBAB1A9453AD00C21639 /* SearchQuestionsViewController.m in Sources */,
+				40BFDBA51A94519E00C21639 /* Question.m in Sources */,
 				40BFDB5F1A925E1C00C21639 /* StacktasticClient.xcdatamodeld in Sources */,
+				40C543CD1A950699003A8206 /* ProfileViewController.m in Sources */,
+				40BFDB9C1A9448AB00C21639 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +526,7 @@
 				40BFDB7B1A925E1C00C21639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		40BFDB7C1A925E1C00C21639 /* Build configuration list for PBXNativeTarget "StacktasticClientTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +535,7 @@
 				40BFDB7E1A925E1C00C21639 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

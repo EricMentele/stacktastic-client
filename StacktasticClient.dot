@@ -1,0 +1,27 @@
+digraph G {
+	node [shape=box];
+	"MenuTableViewController" -> "MenuPressedDelegate";
+	"MenuTableViewController" -> "WebOauthViewController";
+	"MenuTableViewController" -> "Constants";
+	"MenuPressedDelegate" -> {};
+	"StacktasticClientTests" -> {};
+	"Question" -> {};
+	"AppDelegate" -> {};
+	"SearchQuestionsViewController" -> "Question";
+	"SearchQuestionsViewController" -> "StackOverflowService";
+	"SearchQuestionsViewController" -> "QuestionCell";
+	"StackOverflowService" -> "Question";
+	"ProfileViewController" -> {};
+	"WebOauthViewController" -> "WebKit/WebKit";
+	"BurgerContainerController" -> "MenuTableViewController";
+	"BurgerContainerController" -> "ProfileViewController";
+	"BurgerContainerController" -> "Constants";
+	"main" -> "AppDelegate";
+	"QuestionCell" -> {};
+	"Constants" -> {};
+	
+	
+	edge [color=blue, dir=both];
+	"WebKit/WebKit" [color=gray, style=dashed, fontcolor=gray]
+}
+

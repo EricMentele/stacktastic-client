@@ -7,6 +7,8 @@
 //
 
 #import "MenuTableViewController.h"
+#import "WebOauthViewController.h"
+#import "Constants.h"
 
 @interface MenuTableViewController ()
 
@@ -15,6 +17,7 @@
 @implementation MenuTableViewController
 
 - (void)viewDidLoad {
+  
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -22,6 +25,28 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+
+-(void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSString *token = [userDefaults stringForKey:@"token"];
+  if (!token) {
+    
+    WebOauthViewController *webAuthController = [[WebOauthViewController alloc]init];
+    
+    [self presentViewController:webAuthController animated:true completion:^{
+      
+    }];
+  }
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  [self.delegate menuOptionSelected:indexPath.row]; 
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +60,7 @@
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
     
     // Configure the cell...
     
