@@ -13,6 +13,6 @@ Lazily load the question's avatar image
 
 Wednesday
 
-Create a way to be able to switch view controllers using your burger menu
+XCreate a way to be able to switch view controllers using your burger menu
 create a profile view controller that shows the logged in users stack over flow information
 disable arc on the profile view controller. you will need to use manual-retain-release practices for this VC

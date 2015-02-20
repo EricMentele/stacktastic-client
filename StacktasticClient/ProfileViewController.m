@@ -11,6 +11,8 @@
 @interface ProfileViewController () <UIScrollViewDelegate>
 
 @property (retain,nonatomic) UIScrollView *scrollView;
+//@property (retain,nonatomic) UITextField *textField;
+
 @end
 
 @implementation ProfileViewController
@@ -18,33 +20,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-  self.scrollView = [[UIScrollView alloc]initWithFrame:self.view.frame];
-  self.scrollView.backgroundColor = [UIColor blueColor];
-  self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 2000);
-  [self.view addSubview:self.scrollView];
   
-  UITextField *textField = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
-  textField.backgroundColor = [UIColor blueColor];
-  [self.scrollView addSubview:textField];
-  [textField release];
-  self.scrollView.delegate = self;
+  //Manual scroll view and text field
+//  self.scrollView                 = [[UIScrollView alloc]initWithFrame:self.view.frame];
+//  self.scrollView.backgroundColor = [UIColor darkGrayColor];
+ //self.scrollView.contentSize     = CGSizeMake(self.view.frame.size.width, 2000);
+  //self.scrollView.pagingEnabled = true;
+//  [self.view addSubview:self.scrollView];
+//
+//  UITextField *textField          = [[UITextField alloc] initWithFrame:CGRectMake(100, 1000, 100, 50)];
+//  textField.backgroundColor       = [UIColor blueColor];
+//  [self.scrollView addSubview:textField];
+//  [textField release];
+//  self.scrollView.delegate        = self;
 }
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
-  
   NSLog(@"Scrolling, scrolling, scrolling..");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"MEMORY WARNING!!!!!!");
 }
 
 
 -(void)dealloc {
   
-  [self.scrollView release];
+  //[self.scrollView release];
   [super dealloc];
 }
 

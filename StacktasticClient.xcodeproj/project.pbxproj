@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40A40C581A95A6E700D4F834 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A40C571A95A6E700D4F834 /* Profile.m */; };
 		40BFDB591A925E1C00C21639 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB581A925E1C00C21639 /* main.m */; };
 		40BFDB5C1A925E1C00C21639 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB5B1A925E1C00C21639 /* AppDelegate.m */; };
 		40BFDB5F1A925E1C00C21639 /* StacktasticClient.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 40BFDB5D1A925E1C00C21639 /* StacktasticClient.xcdatamodeld */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40A40C561A95A6E700D4F834 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
+		40A40C571A95A6E700D4F834 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
 		40BFDB531A925E1C00C21639 /* StacktasticClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StacktasticClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BFDB571A925E1C00C21639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40BFDB581A925E1C00C21639 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				40BFDBA41A94519E00C21639 /* Question.m */,
 				40BFDBA61A94526900C21639 /* QuestionCell.h */,
 				40BFDBA71A94526900C21639 /* QuestionCell.m */,
+				40A40C561A95A6E700D4F834 /* Profile.h */,
+				40A40C571A95A6E700D4F834 /* Profile.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				40BFDBA81A94526900C21639 /* QuestionCell.m in Sources */,
 				40BFDB891A9271E200C21639 /* MenuTableViewController.m in Sources */,
 				40BFDBAB1A9453AD00C21639 /* SearchQuestionsViewController.m in Sources */,
+				40A40C581A95A6E700D4F834 /* Profile.m in Sources */,
 				40BFDBA51A94519E00C21639 /* Question.m in Sources */,
 				40BFDB5F1A925E1C00C21639 /* StacktasticClient.xcdatamodeld in Sources */,
 				40C543CD1A950699003A8206 /* ProfileViewController.m in Sources */,

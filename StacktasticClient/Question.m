@@ -19,23 +19,17 @@
     NSLog(@"%@",error.localizedDescription);
     return nil;
   }
-  
-  NSArray *items = [jsonDictionary objectForKey:@"items"];
-  
-  NSMutableArray *temp = [[NSMutableArray alloc] init];
-  
+  NSArray *items               = [jsonDictionary objectForKey:@"items"];
+  NSMutableArray *temp         = [[NSMutableArray alloc] init];
   for (NSDictionary *item in items) {
     
-    Question *question = [[Question alloc] init];
-    question.title = item[@"title"];
-    NSDictionary *userInfo = item[@"owner"];
-    question.avatarURL = userInfo[@"profile_image"];
-    
+    Question *question           = [[Question alloc] init];
+    question.title               = item[@"title"];
+    NSDictionary *userInfo       = item[@"owner"];
+    question.avatarURL           = userInfo[@"profile_image"];
     [temp addObject:question];
   }
-  NSArray *final = [[NSArray alloc] initWithArray:temp];
+  NSArray *final               = [[NSArray alloc] initWithArray:temp];
   return final;
 }
-
-
 @end
