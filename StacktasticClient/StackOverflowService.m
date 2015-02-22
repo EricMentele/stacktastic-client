@@ -8,6 +8,7 @@
 
 #import "StackOverflowService.h"
 #import "Question.h"
+#import "Profile.h"
 
 @implementation StackOverflowService
 
@@ -84,8 +85,7 @@
 //MARK: Get My User Info================================================
 -(void)fetchMyUserInfo:(void (^)(NSArray *results, NSString *error))completionHandler {
   
-  NSString *urlString             = @"https://api.stackexchange.com/2.2/";
-  urlString                       = [urlString stringByAppendingString:@"me?order=desc&sort=reputation&site=stackoverflow="];
+  NSString *urlString             = @"https://api.stackexchange.com/2.2/me?order=desc&sort=reputation&site=stackoverflow";
   NSUserDefaults *defaults        = [NSUserDefaults standardUserDefaults];
   NSString *token                 = [defaults objectForKey:@"token"];
   if (token) {
@@ -116,13 +116,14 @@
         case 200 ... 299: {
           
           NSLog(@"%ld",(long)statusCode);
-          NSArray *results                = [Question questionsFromJSON:data];
+          NSArray *results                = [Profile profileFromJSON:data];
           
           dispatch_async(dispatch_get_main_queue(), ^{
             
             if (results) {
               
               completionHandler(results,nil);
+              //NSLog(@"%@",results,nil);
             } else {
               
               completionHandler(nil,@"Info could not be retrieved.");
@@ -133,11 +134,11 @@
         default:
           NSLog(@"%ld",(long)statusCode);
           break;
-      }
-    }//switch
-  }];
+      }//switch
+    }//else
+  }];//data task
   [dataTask resume];
-}
+}//fetch user info
 
 
 //MARK: Get User Image==============================================

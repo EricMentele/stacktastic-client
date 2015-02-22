@@ -16,4 +16,6 @@
 
 -(void)fetchUserImage:(NSString *)avatarURL completionHandler:(void (^) (UIImage *image))completionHandler;
 
+-(void)fetchMyUserInfo:(void (^)(NSArray *results, NSString *error))completionHandler;
+
 @end

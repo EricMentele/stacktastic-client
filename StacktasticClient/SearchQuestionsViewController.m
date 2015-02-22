@@ -54,11 +54,10 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
-  QuestionCell *cell             = [tableView dequeueReusableCellWithIdentifier:@"questionCell"
-                                                                   forIndexPath:indexPath];
+  QuestionCell *cell             = [tableView dequeueReusableCellWithIdentifier:@"questionCell"forIndexPath:indexPath];
   cell.avatarImageView.image     = nil;
   Question *question             = self.questions[indexPath.row];
-  cell.titleTextView.text        = nil;
+  cell.titleTextView.text        = question.title;
   
   if (!question.image) {
     

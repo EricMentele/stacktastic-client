@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StackOverflowService.h"
+#import "Profile.h"
 
 @interface ProfileViewController : UIViewController
+
 
 @end

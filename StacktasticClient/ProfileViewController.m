@@ -10,8 +10,11 @@
 
 @interface ProfileViewController () <UIScrollViewDelegate>
 
-@property (retain,nonatomic) UIScrollView *scrollView;
+//@property (retain,nonatomic) UIScrollView *scrollView;
 //@property (retain,nonatomic) UITextField *textField;
+@property (retain, nonatomic) Profile* profile;
+@property (retain, nonatomic) IBOutlet UIImageView *profileImage;
+@property (retain, nonatomic) IBOutlet UILabel *profileName;
 
 @end
 
@@ -33,21 +36,36 @@
 //  [self.scrollView addSubview:textField];
 //  [textField release];
 //  self.scrollView.delegate        = self;
+  [[StackOverflowService sharedService]fetchMyUserInfo:^(NSArray *results, NSString *error) {
+    
+    self.profile = results[0];
+    [[StackOverflowService sharedService]fetchUserImage:self.profile.avatarURL completionHandler:^(UIImage *image) {
+      
+      self.profile.image = image;
+      self.profileImage.image = self.profile.image;
+    }];
+    self.profileName.text = self.profile.name;
+  }];
 }
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
+  
   NSLog(@"Scrolling, scrolling, scrolling..");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+  
     NSLog(@"MEMORY WARNING!!!!!!");
 }
 
 
 -(void)dealloc {
   
+  [self.profileImage release];
+  [self.profileName release];
+  [self.profile release];
   //[self.scrollView release];
   [super dealloc];
 }
