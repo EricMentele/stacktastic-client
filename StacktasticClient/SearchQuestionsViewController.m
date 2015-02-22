@@ -27,7 +27,7 @@
   self.tableView.dataSource      = self;
   self.tableView.rowHeight       = UITableViewAutomaticDimension;
   // Do any additional setup after loading the view.
-}
+}//view did load
 
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -39,17 +39,16 @@
       
       UIAlertView *networkIssueAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:error delegate:nil cancelButtonTitle:@"Cancel" otherButtonTitles:nil];
       [networkIssueAlert show];
-    }
-    
+    }//if error
     [self.tableView reloadData];
-  }];
-}
+  }];//fetch question with search term
+}//search bar button clicked
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   
   return self.questions.count;
-}
+}//number of rows in section
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -69,8 +68,8 @@
   } else {
     
     cell.avatarImageView.image     = question.image;
-  }
+  }//if else
   return cell;
-}
+}//cell for row at index path
 
 @end

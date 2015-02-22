@@ -12,13 +12,13 @@
 
 - (void)awakeFromNib {
   // Initialization code
-}
+}//awake from nib
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
   [super setSelected:selected animated:animated];
   
   // Configure the view for the selected state
-}
+}//set selected
 
 @end
 

@@ -26,31 +26,31 @@
 
 @implementation BurgerContainerController
 
-NSInteger const slideRightBuffer = 300;
+//NSInteger const slideRightBuffer = 300;
 
 - (void)viewDidLoad {
   
   [super viewDidLoad];
   
   // Do any additional setup after loading the view.
-  
+  //SET UP VIEWS=========================================================================
   self.searchVC.view.frame = self.view.frame;
   self.topViewController   = self.searchVC;
   self.selectedRow         = 0;
   [self.view addSubview:self.searchVC.view];
   [self.searchVC didMoveToParentViewController:self];
   [self addChildViewController:self.searchVC];
-  
+  //SET UP BURGER BUTTON==================================================================
   UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(15, 15, 50, 50)];
   [button setBackgroundImage:[UIImage imageNamed:@"burger_sandwich_PNG4135"] forState:UIControlStateNormal];
   [button addTarget:self action:@selector(burgerButtonPressed) forControlEvents:UIControlEventTouchUpInside];
-  
   [self.searchVC.view addSubview:button];
   self.burgerButton    = button;
+  //GESTURE RECOGNIZERS===================================================================
   self.tapToClose      = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closePanel)];
   self.slideRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slidePanel:)];
   [self.topViewController.view addGestureRecognizer:self.slideRecognizer];
-}
+}//view did load
 
 
 -(void)burgerButtonPressed {
@@ -64,8 +64,8 @@ NSInteger const slideRightBuffer = 300;
   } completion:^(BOOL finished) {
     
     [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
-  }];
-}
+  }];//animate
+}//burger button pressed
 
 
 -(void)closePanel {
@@ -80,8 +80,8 @@ NSInteger const slideRightBuffer = 300;
   } completion:^(BOOL finished) {
     
     weakSelf.burgerButton.userInteractionEnabled = true;
-  }];
-}
+  }];//animate
+}//close panel
 
 
 -(void)slidePanel:(id)sender {
@@ -97,8 +97,8 @@ NSInteger const slideRightBuffer = 300;
       
       self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translatedPoint.x, self.topViewController.view.center.y);
       [pan setTranslation:CGPointZero inView:self.view];
-    }
-  }
+    }//if velocity
+  }//if pan
   
   
   if ([pan state] == UIGestureRecognizerStateEnded) {
@@ -114,19 +114,18 @@ NSInteger const slideRightBuffer = 300;
       } completion:^(BOOL finished) {
         
         [weakSelf.topViewController.view addGestureRecognizer:weakSelf.tapToClose];
-      }];
-    }
-    else {
+      }];//animate
+    }else {
       
       [UIView animateWithDuration:0.2 animations:^{
         
         weakSelf.topViewController.view.center = weakSelf.view.center;
         weakSelf.burgerButton.userInteractionEnabled = true;
-      }];
+      }];//animate
       [self.topViewController.view removeGestureRecognizer:self.tapToClose];
-    }
-  }
-}
+    }//if else
+  }//pan end
+}//slide panel
 
 
 -(UINavigationController *)searchVC {
@@ -134,9 +133,9 @@ NSInteger const slideRightBuffer = 300;
   if (!_searchVC) {
     
     _searchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"searchVC"];
-  }
+  }//if !searchVC
   return _searchVC;
-}
+}//searchVC
 
 
 -(ProfileViewController *)profileVC {
@@ -144,9 +143,9 @@ NSInteger const slideRightBuffer = 300;
   if (!_profileVC) {
     
     _profileVC = [self.storyboard instantiateViewControllerWithIdentifier:@"profileVC"];
-  }
+  }//if
   return _profileVC;
-}
+}//profileVC
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -156,8 +155,8 @@ NSInteger const slideRightBuffer = 300;
     MenuTableViewController *destinationVC = segue.destinationViewController;
     destinationVC.delegate = self;
     self.menuVC = destinationVC;
-  }
-}
+  }//if segue identifier
+}//prep for seque
 
 
 
@@ -186,9 +185,9 @@ NSInteger const slideRightBuffer = 300;
     [self.topViewController.view addGestureRecognizer:self.slideRecognizer];
     
     [self closePanel];
-  } ];
-  
-}
+  }];//animate
+}//switch to view controller
+
 
 -(void)menuOptionSelected:(NSInteger)selectedRow {
   NSLog(@"%ld",(long)selectedRow);
@@ -208,10 +207,11 @@ NSInteger const slideRightBuffer = 300;
         break;
       default:
         break;
-    }
+    }//switch
     [self switchToViewController:destinationVC];
-  }
-}
+  }//if else
+}//menu option selected
+
 /*
  #pragma mark - Navigation
  
@@ -221,5 +221,4 @@ NSInteger const slideRightBuffer = 300;
  // Pass the selected object to the new view controller.
  }
  */
-
 @end

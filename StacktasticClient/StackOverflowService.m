@@ -20,10 +20,12 @@
   dispatch_once(&onceToken, ^{
     
     mySharedService                 = [[StackOverflowService alloc] init];
-  });
+  });//dispatch once
   return mySharedService;
-}
+}//shared service singleton
 
+
+//MARK: Get questions for search term==========================================================
 -(void)fetchQuestionsWithSearchTerm:(NSString *)searchTerm completionHandler:(void (^)(NSArray *results, NSString *error))completionHandler {
   
   NSString *urlString             = @"https://api.stackexchange.com/2.2/";
@@ -36,7 +38,7 @@
     urlString                       = [urlString stringByAppendingString:@"&access_token="];
     urlString                       = [urlString stringByAppendingString:token];
     urlString                       = [urlString stringByAppendingString:@"&key=Sx8sHgheFIjGHrkaG9eeJg(("];
-  }
+  }//if token
   NSURL *url                      = [NSURL URLWithString:urlString];
   NSMutableURLRequest *request    = [[NSMutableURLRequest alloc] initWithURL:url];
   request.HTTPMethod              = @"GET";
@@ -68,18 +70,18 @@
             } else {
               
               completionHandler(nil,@"Search could not be completed");
-            }
-          });
+            }//results
+          });//main queue
           break;
-        }
+        }//case 200..299
         default:
           NSLog(@"%ld",(long)statusCode);
           break;
-      }
-    }
-  }];
+      }//switch
+    }//if else
+  }];//data task
   [dataTask resume];
-}
+}//fetch questions with search term
 
 
 //MARK: Get My User Info================================================
@@ -154,8 +156,8 @@
     dispatch_async(dispatch_get_main_queue(), ^{
       
       completionHandler(image);
-    });
-  });
-}
+    });//main queue
+  });//image queue
+}//fetch user image
 
 @end

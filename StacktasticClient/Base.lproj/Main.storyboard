@@ -37,6 +37,24 @@
             </objects>
             <point key="canvasLocation" x="302" y="325"/>
         </scene>
+        <!--Crash Dummy-->
+        <scene sceneID="Q1O-dv-C7l">
+            <objects>
+                <viewController title="Crash Dummy" id="Mbz-r5-SlO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8qz-Tf-r0n"/>
+                        <viewControllerLayoutGuide type="bottom" id="qqr-tk-vcn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ISd-1s-tPS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCc-eG-TIE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="-425"/>
+        </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="Nns-sx-exF">
             <objects>
@@ -67,14 +85,25 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Owl-xJ-RWS" id="bzW-I6-zoC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="My Questions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOI-yD-RMM">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jOI-yD-RMM" userLabel="Crash App">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Crash App">
+                                                            <attributes>
+                                                                <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                                <font key="NSFont" size="14" name="Impact"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <color key="highlightedColor" red="0.98601246840000001" green="0.02538426496" blue="0.1044239029" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="shadowColor" red="0.98601246840000001" green="0.02538426496" blue="0.1044239029" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Mbz-r5-SlO" kind="show" id="Qpb-QJ-EC0"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="wft-fn-QUw" style="IBUITableViewCellStyleDefault" id="UtX-yU-6TH">
                                         <autoresizingMask key="autoresizingMask"/>

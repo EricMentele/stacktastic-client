@@ -10,6 +10,6 @@
 
 @interface Constants : NSObject
 
-extern const NSInteger* SlideRightBuffer;
+extern const NSInteger SlideRightBuffer;
 
 @end

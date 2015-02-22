@@ -18,7 +18,7 @@
     
     NSLog(@"%@",error.localizedDescription);
     return nil;
-  }
+  }//if error
   NSArray *items               = [jsonDictionary objectForKey:@"items"];
   NSMutableArray *temp         = [[NSMutableArray alloc] init];
   for (NSDictionary *item in items) {
@@ -28,8 +28,8 @@
     NSDictionary *userInfo       = item[@"owner"];
     question.avatarURL           = userInfo[@"profile_image"];
     [temp addObject:question];
-  }
+  }//for item in items
   NSArray *final               = [[NSArray alloc] initWithArray:temp];
   return final;
-}
+}//questions from json
 @end

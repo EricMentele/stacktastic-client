@@ -28,7 +28,7 @@
   NSURL *url                   = [NSURL URLWithString:urlString];
   //set up webview for request with url
   [webView loadRequest:[NSURLRequest requestWithURL:url]];
-}
+}//view did load
 
 
 -(void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
@@ -45,9 +45,10 @@
     [userDefaults synchronize];
     
     [self dismissViewControllerAnimated:true completion:nil];
-  }
+  }//if
   decisionHandler(WKNavigationActionPolicyAllow);
-}
+}//web view
+
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];

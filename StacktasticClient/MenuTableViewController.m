@@ -25,7 +25,7 @@
   
   // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
   // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+}//view did load
 
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -39,20 +39,20 @@
     
     [self presentViewController:webAuthController animated:true completion:^{
       
-    }];
-  }
-}
+    }];//present view controller
+  }//if token
+}//viewDidAppear
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
   
   [self.delegate menuOptionSelected:indexPath.row];
-}
+}//didSelectRowAtIndexPath
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
-}
+}//memory warning
 
 
 #pragma mark - Table view data source

@@ -43,22 +43,22 @@
       
       self.profile.image = image;
       self.profileImage.image = self.profile.image;
-    }];
+    }];//image
     self.profileName.text = self.profile.name;
-  }];
-}
+  }];//user info
+}//view did load
 
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView {
   
   NSLog(@"Scrolling, scrolling, scrolling..");
-}
+}//scroll
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
   
     NSLog(@"MEMORY WARNING!!!!!!");
-}
+}//mem warn
 
 
 -(void)dealloc {
@@ -68,7 +68,7 @@
   [self.profile release];
   //[self.scrollView release];
   [super dealloc];
-}
+}//dozer time!
 
 /*
 #pragma mark - Navigation
